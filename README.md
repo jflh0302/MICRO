@@ -1,2 +1,0 @@
-# MICRO
-ACT 2
