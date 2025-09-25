@@ -1,0 +1,184 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.43.1.0
+Copyright (C) 2025 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Jesus Francisco Lopez jflh0302@hotmail.com
+UNAM
+User-based license: Keil MDK Community (non-commercial free of charge)
+Valid until: May 31 2033. Cached until: Sep 30 2025
+ 
+Tool Versions:
+Toolchain:       Keil MDK Community (non-commercial free of charge  Version: 5.43.0.0
+Toolchain Path:  C:\Users\jflh0\AppData\Local\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.24
+Assembler:       Armasm.exe V6.24
+Linker/Locator:  ArmLink.exe V6.24
+Library Manager: ArmAr.exe V6.24
+Hex Converter:   FromElf.exe V6.24
+CPU DLL:         SARMCM3.DLL V5.43.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      UL2CM3.DLL V1.164.16.0
+Dialog DLL:      TCM.DLL V1.56.6.0
+ 
+<h2>Project:</h2>
+C:\Microprocesadores\Micropocesadores\Proyectos\L_03.uvprojx
+Project File Date:  09/24/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.24', folder: 'C:\Users\jflh0\AppData\Local\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target_1'
+L3.s(3): error: unexpected token at start of statement
+    ; ----------------------------------------------------
+      ^
+L3.s(4): error: unexpected token at start of statement
+    ; 1. Calcular la elevación a la 5ta potencia del binomio (9+7)^5
+L3.s(5): error: unexpected token at start of statement
+    ;    (9+7)^5 = 16^5 = 1,048,576
+         ^
+L3.s(6): error: instruction 'lo' can not set flags, but 's' suffix specified
+    ;    Los "coeficientes" se interpretan como este resultado
+         ^
+L3.s(7): error: unexpected token in argument list
+    ;    que se almacena en los registros r0-r5.
+                ^
+L3.s(8): error: unexpected token at start of statement
+    ; ----------------------------------------------------
+      ^
+L3.s(10): error: expected newline
+    MUL     R0, R0, R0          ; R0 = 16 * 16 = 256
+                                               ^
+L3.s(11): error: expected newline
+    MUL     R0, R0, R0          ; R0 = 256 * 256 = 65536
+                                                 ^
+L3.s(12): error: invalid instruction, any one of the following would fix this:
+    MUL     R0, R0, #16         ; R0 = 65536 * 16 = 1048576
+    ^
+L3.s(12): note: operand must be a register in range [r0, r12] or r14
+    MUL     R0, R0, #16         ; R0 = 65536 * 16 = 1048576
+                    ^
+L3.s(12): note: too many operands for instruction
+    MUL     R0, R0, #16         ; R0 = 65536 * 16 = 1048576
+                    ^
+L3.s(12): error: expected newline
+    MUL     R0, R0, #16         ; R0 = 65536 * 16 = 1048576
+                                                  ^
+L3.s(14): error: unexpected token in argument list
+    ; Almacenar el resultado en R0-R5
+                   ^
+L3.s(21): error: unexpected token at start of statement
+    ; ----------------------------------------------------
+      ^
+L3.s(22): error: unexpected token at start of statement
+    ; 2. Dividir los resultados en r3 y r4 y almacenar en r6
+      ^
+L3.s(23): error: unexpected token at start of statement
+    ; ----------------------------------------------------
+      ^
+L3.s(24): error: expected newline
+    UDIV    R6, R3, R4          ; R6 = 1048576 / 1048576 = 1
+                                                         ^
+L3.s(26): error: unexpected token at start of statement
+    ; ----------------------------------------------------
+      ^
+L3.s(27): error: unexpected token at start of statement
+    ; 3. Sumar todos los resultados y almacenar en r7
+      ^
+L3.s(28): error: unexpected token at start of statement
+    ; ----------------------------------------------------
+      ^
+L3.s(33): error: expected newline
+    ADDS    R7, R7, R5          ; R7 = 1048576 * 6 = 6291456
+                                                   ^
+L3.s(35): error: unexpected token at start of statement
+    ; ----------------------------------------------------
+      ^
+L3.s(36): error: unexpected token at start of statement
+    ; 4. Restar el resultado en r8 con la suma de r2, r3 y r4
+      ^
+L3.s(37): error: unexpected token at start of statement
+    ; ----------------------------------------------------
+      ^
+L3.s(38): error: unexpected token in argument list
+    LDR     R8, =10000000       ; Ejemplo: Asumir un valor inicial en R8
+                                                     ^
+L3.s(39): error: operand must be a register in range [r0, r14]
+    ADDS    R234_SUM, R2, R3
+            ^
+L3.s(40): error: invalid instruction
+    ADDS    R234_SUM, R234_SUM, R4
+    ^
+L3.s(41): error: expected newline
+    SUBS    R8, R8, R234_SUM    ; R8 = 10000000 - (1048576 * 3) = 6854272
+                                                                ^
+L3.s(43): error: unexpected token at start of statement
+    ; ----------------------------------------------------
+      ^
+L3.s(44): error: unexpected token at start of statement
+    ; 5. Aplicar una máscara de 16 bits a r0 y r5, unirlos en r9
+L3.s(45): error: unexpected token at start of statement
+    ; ----------------------------------------------------
+      ^
+L3.s(46): error: unexpected token in argument list
+    LSLS    R0, R0, #16         ; Desplazar R0 16 bits a la izquierda
+                                               ^
+L3.s(47): error: unexpected token in argument list
+    ORRS    R9, R0, R5          ; Unir los valores en R9
+                                           ^
+L3.s(49): error: unexpected token at start of statement
+    ; ----------------------------------------------------
+      ^
+L3.s(50): error: unexpected token at start of statement
+    ; 6. Multiplicar y dividir por 2 los resultados en r1 y r2
+      ^
+L3.s(51): error: unexpected token at start of statement
+    ; ----------------------------------------------------
+      ^
+L3.s(52): error: expected newline
+    LSLS    R10, R1, #1         ; R10 = R1 * 2 = 2097152
+                                               ^
+L3.s(53): error: expected newline
+    LSRS    R11, R2, #1         ; R11 = R2 / 2 = 524288
+                                               ^
+L3.s(55): error: unexpected token in argument list
+    ; Fin del programa
+              ^
+assembling L3.s...
+".\Objects\L_03.axf" - 37 Error(s), 0 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS.6.2.0.pack
+                ARM::CMSIS@6.2.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 6.1.1
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil::STM32F1xx_DFP@2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F103C8
+  ./RTE/_Target_1
+  C:/Users/jflh0/AppData/Local/Arm/Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include
+  C:/Users/jflh0/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@6.1.1
+
+   * Component: Keil::Device:Startup@1.0.0
+      Source file:   Device/Source/ARM/startup_stm32f10x_md.s
+      Source file:   Device/Source/system_stm32f10x.c
+      Include file:  RTE_Driver/Config/RTE_Device.h
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+Target not created.
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
